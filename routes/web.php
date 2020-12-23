@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 Route::get('/','user\WelcomeController@index')->name('home');
-//Route::get('/home','user\WelcomeController@index')->name('home2');
-Route::get('/kontak','user\WelcomeController@kontak')->name('kontak');
+Route::get('/tentang','user\WelcomeController@tentang')->name('tentang');
 Route::get('/produk','user\ProdukController@index')->name('user.produk');
 Route::get('/produk/cari','user\ProdukController@cari')->name('user.produk.cari');
 Route::get('/kategori/{id}','KategoriController@produkByKategori')->name('user.kategori');
 Route::get('/produk/{id}','user\ProdukController@detail')->name('user.produk.detail');
+Route::get('/ar','user\ProdukController@gambarar')->name('ar');
 
 Route::get('/pelanggan',function(){
     return 'Pelanggan';

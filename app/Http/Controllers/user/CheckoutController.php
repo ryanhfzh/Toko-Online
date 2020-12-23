@@ -26,7 +26,7 @@ class CheckoutController extends Controller
             $berat = $k->weigth * $k->qty;
             $berattotal = $berattotal + $berat;
         }
-        //lalu ambil id kota si pelanngan
+        //lalu ambil id kota si pelanggan
         $city = DB::table('alamat')->where('user_id',$id_user)->get();
         $city_destination =  $city[0]->cities_id;
         //ambil id kota toko

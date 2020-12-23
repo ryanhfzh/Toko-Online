@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Categories;
+use App\Gambar;
 use Illuminate\Support\Facades\DB;
 class ProdukController extends Controller
 {
@@ -45,5 +46,11 @@ class ProdukController extends Controller
         );
         return view('user.cariproduk',$data);
 
+    }
+
+    public function gambarar()
+    {
+        return view('user.ar');
+        
     }
 }

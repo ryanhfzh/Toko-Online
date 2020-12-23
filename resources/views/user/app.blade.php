@@ -84,7 +84,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="{{ route('user.alamat')}}">Pengaturan Alamat</a>
-                                <a class="dropdown-item" href="#">Pengaturan Akun</a>
+                                <!-- <a class="dropdown-item" href="#">Pengaturan Akun</a> -->
                                 <a class="dropdown-item" href="#">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                   onclick="event.preventDefault();
@@ -125,7 +125,7 @@
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li class="{{ Request::path() === 'home' ? '' : '' }}"><a href="{{ route('home') }}">Beranda</a></li>
             <li class="{{ Request::path() === 'produk' ? '' : '' }}"><a href="{{ route('user.produk') }}">Produk</a></li>
-            <li class="{{ Request::path() === 'kontak' ? '' : '' }}"><a href="{{ route('kontak') }}">Kontak</a></li>
+            <li class="{{ Request::path() === 'tentang' ? '' : '' }}"><a href="{{ route('tentang') }}">Tentang Kami</a></li>
           </ul>
         </div>
       </nav>
@@ -158,7 +158,7 @@
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="#">Tentang Kami</a></li>
+                  <li><a href="{{ route('tentang') }}">Tentang Kami</a></li>
                   <li><a href="#">Blog</a></li>
                   <li><a href="#">Karir</a></li>
                 </ul>

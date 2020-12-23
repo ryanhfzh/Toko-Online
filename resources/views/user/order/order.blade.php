@@ -17,7 +17,7 @@
     </div>
     <div class="row mb-5">
         <div class="col-md-12">
-           <div class="table-responsive">
+           <!-- <div class="table-responsive"> -->
            <div class="table-responsive">
            <table class="table table-bordered">
             <thead>

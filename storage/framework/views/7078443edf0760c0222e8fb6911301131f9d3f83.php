@@ -84,7 +84,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="<?php echo e(route('user.alamat')); ?>">Pengaturan Alamat</a>
-                                <a class="dropdown-item" href="#">Pengaturan Akun</a>
+                                <!-- <a class="dropdown-item" href="#">Pengaturan Akun</a> -->
                                 <a class="dropdown-item" href="#">
                                 <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                   onclick="event.preventDefault();
@@ -125,7 +125,7 @@
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li class="<?php echo e(Request::path() === 'home' ? '' : ''); ?>"><a href="<?php echo e(route('home')); ?>">Beranda</a></li>
             <li class="<?php echo e(Request::path() === 'produk' ? '' : ''); ?>"><a href="<?php echo e(route('user.produk')); ?>">Produk</a></li>
-            <li class="<?php echo e(Request::path() === 'kontak' ? '' : ''); ?>"><a href="<?php echo e(route('kontak')); ?>">Kontak</a></li>
+            <li class="<?php echo e(Request::path() === 'tentang' ? '' : ''); ?>"><a href="<?php echo e(route('tentang')); ?>">Tentang Kami</a></li>
           </ul>
         </div>
       </nav>
@@ -158,7 +158,7 @@
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="#">Tentang Kami</a></li>
+                  <li><a href="<?php echo e(route('tentang')); ?>">Tentang Kami</a></li>
                   <li><a href="#">Blog</a></li>
                   <li><a href="#">Karir</a></li>
                 </ul>

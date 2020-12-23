@@ -26,7 +26,7 @@
             <div class="col-lg-4 mx-auto">
               <div class="auth-form-light text-left p-5">
                 <div class="brand-logo">
-                  <img src="{{ asset('adminassets') }}/assets/images/logo.svg">
+                  <img src="{{ asset('adminassets') }}/assets/images/logo.png">
                 </div>
                 <h4>Halo! Selamat Datang</h4>
                 <h6 class="font-weight-light">Silahkan Login Untuk Melanjutkan.</h6>
@@ -51,7 +51,7 @@
                     @enderror
                   </div>
                   <div class="mt-3">
-                    <button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type="submit">SIGN IN</button>
+                    <button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type="submit">LOGIN</button>
                   </div>
                   <div class="text-center mt-4 font-weight-light"> Belum Punya Akun? <a href="register" class="text-primary">Buat</a>
                   </div>
