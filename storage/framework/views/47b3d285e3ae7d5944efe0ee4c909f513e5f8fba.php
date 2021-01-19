@@ -54,7 +54,7 @@
                 </a>
                 <div class="block-4-text p-4">
                 <h3><a href="<?php echo e(route('user.produk.detail',['id' =>  $produk->id])); ?>"><?php echo e($produk->name); ?></a></h3>
-                <p class="mb-0">RP <?php echo e($produk->price); ?></p>
+                <p class="mb-0">Rp. <?php echo number_format($produk->price, 0, ',', '.'); ?> </p>
                 <a href="<?php echo e(route('user.produk.detail',['id' =>  $produk->id])); ?>" class="btn btn-primary mt-2">Detail</a>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             </div>
         </div>
         </div>  
-
+       
         <!-- <div class="border p-4 rounded mb-4">
             <div class="mb-4">
             <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>

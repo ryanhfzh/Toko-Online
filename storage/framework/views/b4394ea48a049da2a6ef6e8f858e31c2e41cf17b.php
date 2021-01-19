@@ -19,7 +19,7 @@
             <?php echo e($produk->description); ?>
 
         </p>
-        <p><strong class="text-primary h4">Rp <?php echo e($produk->price); ?> </strong></p>
+        <p><strong class="text-primary h4">Rp. <?php echo number_format($produk->price, 0, ',', '.'); ?></strong></p>
         <div class="mb-5">
             <form action="<?php echo e(route('user.keranjang.simpan')); ?>" method="post">
                 <?php echo csrf_field(); ?>

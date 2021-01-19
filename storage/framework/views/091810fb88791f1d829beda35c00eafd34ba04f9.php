@@ -44,7 +44,8 @@
                             <tr>
                                 <td align="center"></td>
                                 <td><?php echo e($product->name); ?></td>
-                                <td><?php echo e($product->price); ?></td>
+                                <!-- <td><?php echo e($product->price); ?></td> -->
+                                <td>Rp. <?php echo number_format($product->price, 0, ',', '.'); ?></td>
                                 <td><?php echo e($product->weigth); ?>gr</td>
                                 <td><?php echo e($product->nama_kategori); ?></td>
                                 <td><?php echo e($product->stok); ?></td>

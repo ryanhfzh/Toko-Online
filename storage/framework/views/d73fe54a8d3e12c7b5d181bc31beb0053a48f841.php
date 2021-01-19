@@ -41,7 +41,7 @@
                                 <td align="center"></td>
                                 <td><?php echo e($order->invoice); ?></td>
                                 <td><?php echo e($order->nama_pemesan); ?></td>
-                                <td><?php echo e($order->subtotal + $order->biaya_cod); ?></td>
+                                <td>Rp <?php echo number_format($order->subtotal + $order->biaya_cod, 0, ',', '.'); ?></td>
                                 <td><?php echo e($order->metode_pembayaran); ?></td>
                                 <td><?php echo e($order->name); ?></td>
                                 <td align="center">

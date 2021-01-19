@@ -45,7 +45,8 @@
                             <tr>
                                 <td align="center"></td>
                                 <td>{{ $product->name }}</td>
-                                <td>{{ $product->price }}</td>
+                                <!-- <td>{{ $product->price }}</td> -->
+                                <td>@currency($product->price)</td>
                                 <td>{{ $product->weigth }}gr</td>
                                 <td>{{ $product->nama_kategori }}</td>
                                 <td>{{ $product->stok }}</td>

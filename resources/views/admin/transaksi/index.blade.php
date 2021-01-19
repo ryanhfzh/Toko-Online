@@ -42,7 +42,7 @@
                                 <td align="center"></td>
                                 <td>{{ $order->invoice }}</td>
                                 <td>{{ $order->nama_pemesan }}</td>
-                                <td>{{ $order->subtotal + $order->biaya_cod }}</td>
+                                <td>@currency ($order->subtotal + $order->biaya_cod)</td>
                                 <td>{{ $order->metode_pembayaran }}</td>
                                 <td>{{ $order->name }}</td>
                                 <td align="center">

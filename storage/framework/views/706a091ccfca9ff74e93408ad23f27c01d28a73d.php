@@ -31,7 +31,7 @@
                 <?php $__currentLoopData = $order; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $o): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
                     <td><?php echo e($o->invoice); ?></td>
-                    <td><?php echo e($o->subtotal + $o->biaya_cod); ?></td>
+                    <td>Rp. <?php echo number_format($o->subtotal + $o->biaya_cod, 0, ',', '.'); ?></td>
                     <td><?php echo e($o->name); ?></td>
                     <td>
                     <a href="<?php echo e(route('user.order.pembayaran',['id' => $o->id])); ?>" class="btn btn-success">Bayar</a>
@@ -69,7 +69,7 @@
                 <?php $__currentLoopData = $dicek; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $o): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
                     <td><?php echo e($o->invoice); ?></td>
-                    <td><?php echo e($o->subtotal + $o->biaya_cod); ?></td>
+                    <td>Rp. <?php echo number_format($o->subtotal + $o->biaya_cod, 0, ',', '.'); ?></td>
                     <td>
                         <?php if($o->name == 'Perlu Di Cek'): ?>
                         Sedang Di Cek
@@ -110,7 +110,7 @@
                 <?php $__currentLoopData = $histori; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $o): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
                     <td><?php echo e($o->invoice); ?></td>
-                    <td><?php echo e($o->subtotal + $o->biaya_cod); ?></td>
+                    <td>Rp. <?php echo number_format($o->subtotal + $o->biaya_cod, 0, ',', '.'); ?></td>
                     <td><?php echo e($o->name); ?></td>
                     <td>
                     <a href="<?php echo e(route('user.order.detail',['id' => $o->id])); ?>" class="btn btn-success">Detail</a>
