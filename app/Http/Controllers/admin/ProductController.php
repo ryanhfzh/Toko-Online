@@ -36,9 +36,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //menyimpan produk ke database
-        if($request->file('image')){
+        if($request->file('image'.'ar')){
             //simpan foto produk yang di upload ke direkteri public/storage/imageproduct
             $file = $request->file('image')->store('imageproduct','public');
+            $file = $request->file('ar')->store('arproduct','public');
             
             Product::create([
                 'name' => $request->name,
@@ -47,8 +48,8 @@ class ProductController extends Controller
                 'stok' => $request->stok,
                 'weigth' => $request->weigth,
                 'categories_id' => $request->categories_id,
-
-                'image'          => $file
+                'image'          => $file,
+                'ar'          => $file
 
             ]);
 
@@ -78,6 +79,12 @@ class ProductController extends Controller
             Storage::delete('public/'.$prod->image);
             $file = $request->file('image')->store('imageproduct','public');
             $prod->image = $file;
+        }
+        if( $request->file('ar')){
+            
+            Storage::delete('public/'.$prod->ar);
+            $file = $request->file('ar')->store('arproduct','public');
+            $prod->ar = $file;
         }
 
         $prod->name = $request->name;

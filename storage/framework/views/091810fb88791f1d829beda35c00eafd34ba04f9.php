@@ -36,6 +36,7 @@
                             <th>Kategori</th>
                             <th>Stok</th>
                             <th>Gambar</th>
+                            <th>Gambar AR</th>
                             <th width="15%">Aksi</th>
                           </tr>
                         </thead>
@@ -50,6 +51,7 @@
                                 <td><?php echo e($product->nama_kategori); ?></td>
                                 <td><?php echo e($product->stok); ?></td>
                                 <td><img src="<?php echo e(asset('storage/'.$product->image)); ?>" alt="" ></td>
+                                <td><img src="<?php echo e(asset('storage/'.$product->ar)); ?>" alt="" ></td>
                                 <td align="center">
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                   <a href="<?php echo e(route('admin.product.edit',['id'=>$product->id])); ?>" class="btn btn-warning btn-sm">

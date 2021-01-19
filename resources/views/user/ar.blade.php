@@ -29,13 +29,8 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <!-- <a-sphere position="0 1.25 -5" radius="0.5" color="#EF2D5E"></a-sphere> -->
+      <a-plane position="0 1.25 -5" width="1.5" height="1.5" src="{{ asset('conto.png') }}" ></a-plane>
       <a-camera gps-camera rotation-reader> </a-camera>
-      <a-assets>
-      <a-asset-item id="cityModel" src="{{ asset('adminassets') }}/assets/images/favicon.png"></a-asset-item>
-      </a-assets>
-      <a-entity position="0 1.25 -5" gltf-model="#cityModel" modify-materials></a-entity>
-      <img position="0 1.25 -5" src="{{ asset('adminassets') }}/assets/images/favicon.png"/>
     </a-scene>
 
     <div class="buttons">

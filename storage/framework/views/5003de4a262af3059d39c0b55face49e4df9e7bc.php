@@ -59,6 +59,11 @@
                                     <small>kosongkan jika tidak mengubah gambar</small>
                                 </div>
                                 <div class="form-group">
+                                    <label>Gambar AR</label>
+                                    <input type="file" name="ar" class="form-control">
+                                    <small>kosongkan jika tidak mengubah gambar</small>
+                                </div>
+                                <div class="form-group">
                                 <label for="">Deskripsi</label>
                                 <textarea name="description" id="" cols="30" rows="10" class="form-control" required><?php echo e($product->description); ?></textarea>
                                 </div>

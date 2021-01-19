@@ -59,6 +59,10 @@
                                     <input required type="file" name="image" class="form-control">
                                 </div>
                                 <div class="form-group">
+                                    <label>Gambar AR</label>
+                                    <input required type="file" name="ar" class="form-control">
+                                </div>
+                                <div class="form-group">
                                 <label for="">Deskripsi</label>
                                 <textarea name="description" id="" cols="30" rows="10" class="form-control" required>
                                 </textarea>

@@ -37,6 +37,7 @@
                             <th>Kategori</th>
                             <th>Stok</th>
                             <th>Gambar</th>
+                            <th>Gambar AR</th>
                             <th width="15%">Aksi</th>
                           </tr>
                         </thead>
@@ -51,6 +52,7 @@
                                 <td>{{ $product->nama_kategori }}</td>
                                 <td>{{ $product->stok }}</td>
                                 <td><img src="{{ asset('storage/'.$product->image) }}" alt="" ></td>
+                                <td><img src="{{ asset('storage/'.$product->ar) }}" alt="" ></td>
                                 <td align="center">
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                   <a href="{{ route('admin.product.edit',['id'=>$product->id]) }}" class="btn btn-warning btn-sm">
