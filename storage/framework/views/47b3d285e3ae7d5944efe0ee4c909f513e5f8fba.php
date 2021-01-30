@@ -14,6 +14,7 @@
         <h3 class="display-5" style="text-transform:uppercase">Produk Kategori <?php echo e($categories->name); ?></h3>
     </div>
     </div>
+
     <div class="row mb-5">
         <div class="col-md-9 order-2">
 
@@ -72,6 +73,17 @@
             </div>
         </div>
         </div>  
+
+        <div class="col-md-3 order-1 mb-5 mb-md-0">
+        <div class="border p-4 rounded mb-4">
+            <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
+            <ul class="list-unstyled mb-0">
+            <?php $__currentLoopData = $sideCat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categori): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <li class="mb-1"><a href="<?php echo e(route('user.kategori',['id' => $categori->id])); ?>" class="d-flex"><span><?php echo e($categori->name); ?></span> <span class="text-black ml-auto">( <?php echo e($categori->jumlah); ?> )</span></a>
+            </li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </ul>
+        </div>
        
         <!-- <div class="border p-4 rounded mb-4">
             <div class="mb-4">

@@ -44,7 +44,7 @@
         </div>
         <p><button type="submit" class="buy-now btn btn-sm btn-primary">Add To Cart</button></p>
         <!-- <p><button type="button" class="btn btn-sm btn-success">try me!</button></p> -->
-        <p><a href="{{ route('ar') }}" type="button" class="btn btn-sm btn-success" >try me!</a></p>
+        <p><a href="{{ route('ar',['id' =>  $produk->id]) }}" type="button" class="btn btn-sm btn-success" >try me!</a></p>
         </form>
         </div>
     </div>

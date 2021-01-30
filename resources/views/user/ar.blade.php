@@ -29,7 +29,7 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <a-plane position="0 1.25 -5" width="1.5" height="1.5" src="{{ asset('conto.png') }}" ></a-plane>
+      <a-plane position="0 1.25 -5" width="1.5" height="1.5" src="{{ asset('storage/' . $product->ar) }}" ></a-plane>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
 

@@ -48,9 +48,14 @@ class ProdukController extends Controller
 
     }
 
-    public function gambarar()
+    public function gambarar(Request $request)
     {
-        return view('user.ar');
+        $id = $request->get('id');
+        $dataProduct = Product::findOrFail($id);
+        $data = [
+            'product' => $dataProduct,
+        ];
+        return view('user.ar', $data);
         
     }
 }
