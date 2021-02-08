@@ -16,12 +16,25 @@
         <testsuite name="Feature">
             <directory suffix="Test.php">./tests/Feature</directory>
         </testsuite>
+        <testsuite name="Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
     </testsuites>
-    <coverage processUncoveredFiles="true">
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">/path/to/files</directory>
+            <file>/path/to/file</file>
+            <exclude>
+            <directory suffix=".php">/path/to/files</directory>
+            <file>/path/to/file</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <!-- <coverage processUncoveredFiles="true">
         <include>
             <directory suffix=".php">./app</directory>
         </include>
-    </coverage>
+    </coverage> -->
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="BCRYPT_ROUNDS" value="4"/>
@@ -38,6 +51,10 @@
             yui="true" highlight="true"
             lowUpperBound="50" highLowerBound="80" />
     </logging> -->
+    <logging>
+    <log lowUpperBound="35" highLowerBound="70" showUncoveredFiles="true" />
+    <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+    </logging>
 
     <!-- <env name="DB_CONNECTION" value="phpunit_test"/> -->
 

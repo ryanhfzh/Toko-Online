@@ -16,6 +16,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "lorisleiva/laravel-deployer": "^0.3.5",
         "yajra/laravel-datatables-oracle": "^9.0"
     },
     "require-dev": {
@@ -40,8 +41,7 @@
             "App\\": "app/"
         },
         "classmap": [
-			"Tests\\": "tests/",
-            "database/seeds",
+			"database/seeds",
             "database/factories"
         ]
     },
