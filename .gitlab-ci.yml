@@ -5,7 +5,7 @@ building:
   stage: build
   script:
     - git reset --hard
-    - git pull origin main
+    - git pull origin develop
     - composer install
     - cp .env.example .env
     - php artisan key:generate
@@ -13,9 +13,9 @@ building:
     - php artisan cache:clear
     - php artisan config:clear
     - php artisan storage:link
-    - sudo chown -R deployer@ridelabel.com:www-data /var/www/toko-online/
-    - find /var/www/toko-online/ -type f -exec chmod 664 {} \;
-    - find /var/www/toko-online/ -type d -exec chmod 775 {} \;
+    - sudo chown -R root:www-data /var/www/toko-online/
+    - find /var/www/toko-online -type f -exec chmod 664 {} \;
+    - find /var/www/toko-online -type d -exec chmod 775 {} \;
     - chgrp -R www-data storage bootstrap/cache
     - chmod -R ug+rwx storage bootstrap/cache
 testing:
@@ -27,4 +27,3 @@ deploying:
   script:
     - echo "Deployed"
     - php artisan queue:restart #if you use queue
-    
